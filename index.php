@@ -5,7 +5,16 @@ class Movie {
     public $length;
     public $language;
     public $genre;
+
+    function __construct($_genre) {
+        $this->genre = $_genre;
+    }
+
+
 }
+
+$sala1 = new Movie("Avventura");
+echo $sala1->genre;
 
 
 
