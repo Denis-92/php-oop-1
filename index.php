@@ -38,6 +38,8 @@ $sala1->setType(35);
 $typeMovie_sala1 = $sala1->getType();
 echo "<p>" . $typeMovie_sala1 . "</p>";
 
+die();
+
 
 
 
