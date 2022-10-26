@@ -5,7 +5,7 @@ class Movie {
 
     // VARIABILI D'ISTANZA
     public $title;
-    public $length;
+    public $length = "";
     public $language;
     public $genre;
     public $type;
@@ -17,26 +17,35 @@ class Movie {
     }
 
     // METODO
-    public function setType ( $length ) {
+    public function setTypeLength ( $length ) {
         if ( $length < 60 ) {
             $this->type = "Cortometraggio";
         } else {
             $this->type = "Cinema Movie";
         }
+        $this->length = $length;
     }
 
     public function getType() {
         return $this->type;
     }
 
+    public function getLength() {
+        return $this->length;
+    }
+
 
 }
 
 $sala1 = new Movie("Avventura");
-echo "<p>" . $sala1->genre . "</p>";
+echo "<p>Genere: " . $sala1->genre . "</p>";
 
-$sala1->setType(35);
+$sala1->setTypeLength(65);
+
+$lengthMovie_sala1 = $sala1->getLength();
+echo "<p>Durata: " . $lengthMovie_sala1 . " minuti</p>";
+
 $typeMovie_sala1 = $sala1->getType();
-echo "<p>" . $typeMovie_sala1 . "</p>";
+echo "<p>Tipo pellicola: " . $typeMovie_sala1 . "</p>";
 
 ?>
