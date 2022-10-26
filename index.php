@@ -11,8 +11,9 @@ class Movie {
     public $type;
 
     // COSTRUTTORE
-    function __construct( $_genre ) {
+    function __construct( $_genre , $_language = "" ) {
         $this->genre = $_genre;
+        $this->language = $_language;
     }
 
     // METODO
