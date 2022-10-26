@@ -1,12 +1,24 @@
 <?php
 
-class user {
-    public $nome;
-    public $eta;
+class Movie {
+    public $title;
+    public $length;
+    public $language;
+    public $genre;
+}
 
-    function __construct($_eta) {
-        $this->eta = $_eta;
-    }
+
+
+
+
+
+// class user {
+//     public $nome;
+//     public $eta;
+
+//     function __construct($_eta) {
+//         $this->eta = $_eta;
+//     }
 
 
     // public $email;
@@ -23,7 +35,7 @@ class user {
     //     return $this->sconto;
     // }
 
-}
+// }
 
 // $pippo = new user();
 
@@ -34,7 +46,7 @@ class user {
 // $pippo->email = "pippo@email.it";
 
 
-$paperino = new user(50);
-echo $paperino->eta;
+// $paperino = new user(50);
+// echo $paperino->eta;
 
 ?>
