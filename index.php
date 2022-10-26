@@ -1,20 +1,42 @@
 <?php
 
+// CLASSE
 class Movie {
+
+    // VARIABILI D'ISTANZA
     public $title;
     public $length;
     public $language;
     public $genre;
+    public $type;
 
-    function __construct($_genre) {
+    // COSTRUTTORE
+    function __construct( $_genre ) {
         $this->genre = $_genre;
+    }
+
+    // METODO
+    public function setType ( $length ) {
+        if ( $length < 60 ) {
+            $this->type = "Cortometraggio";
+        } else {
+            $this->type = "Cinema Movie";
+        }
+    }
+
+    public function getType() {
+        return $this->type;
     }
 
 
 }
 
 $sala1 = new Movie("Avventura");
-echo $sala1->genre;
+echo "<p>" . $sala1->genre . "</p>";
+
+$sala1->setType(35);
+$typeMovie_sala1 = $sala1->getType();
+echo "<p>" . $typeMovie_sala1 . "</p>";
 
 
 
