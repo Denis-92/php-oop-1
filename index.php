@@ -3,8 +3,9 @@
 require_once __DIR__ . "/class/Movie.php";
 
 // SETTARE GENERE MOVIE
-$sala1 = new Movie("Azione");
+$sala1 = new Movie("Azione", "Inglese");
 echo "<p>Genere: " . $sala1->genre . "</p>";
+echo "<p>Lingua: " . $sala1->language . "</p>";
 
 // SETTARE DURATA MOVIE IN MINUTI
 $sala1->setTypeLength(55);
